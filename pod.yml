@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: samplePod
+  name: sample-pod
 spec:
   containers:
   - image: dreamcatchernick/nicktest
-    name: testNodejs
+    name: test-nodejs
     imagePullPolicy: Always
