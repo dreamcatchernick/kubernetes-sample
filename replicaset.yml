@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: sample-replica
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sample
+  template:
+    metadata:
+      labels:
+        app: sample
+    spec:
+      containers:
+      - name: sample-replica
+        image: dreamcatchernick/nicktest
+        imagePullPolicy: Always 
