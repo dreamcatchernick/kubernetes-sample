@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: sample-deployment
+spec: 
+  replicas: 2
+  template: 
+    metadata: 
+      labels: 
+        app: sample
+    spec: 
+      containers: 
+        - image: "dreamcatchernick/nicktest"
+          imagePullPolicy: Always
+          name: sample
+          ports: 
+            - containerPort: 3000
+------------------------------------------
+apiVersion: v1
+kind: Service
+metadata: 
+  name: sample-svc
+spec: 
+  ports: 
+     -  port: 3000
+        protocol: TCP
+  selector: 
+    app: sample
+  type: NodePort
