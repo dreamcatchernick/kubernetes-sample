@@ -1,0 +1,14 @@
+apiVersion: extensions/v1
+kind: Ingress
+metadata:
+  annotations:nginx.ingress.kubernetes.io/rewrite-target: /
+  name: sample-ingress
+spec:
+  rules:
+  - host: fuck.local
+    http:
+      paths:
+      - backend:
+          serviceName: appsvc1
+          servicePort: 30000
+        path: /
