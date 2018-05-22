@@ -27,6 +27,7 @@ spec:
   ports: 
      -  port: 3000
         protocol: TCP
+        targetPort: 30000
   selector: 
     app: sample
   type: NodePort
