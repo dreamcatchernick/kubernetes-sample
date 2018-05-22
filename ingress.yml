@@ -12,4 +12,4 @@ spec:
       - backend:
           serviceName: sample-svc
           servicePort: 3000
-        path: /
+        path: /fuck
