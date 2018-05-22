@@ -9,6 +9,6 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: appsvc1
-          servicePort: 30000
+          serviceName: sample-svc
+          servicePort: 3000
         path: /
